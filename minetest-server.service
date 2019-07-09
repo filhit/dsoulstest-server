@@ -1,0 +1,10 @@
+[Unit]
+Description=Runs dsoulstest minetest server
+
+[Service]
+ExecStart=/usr/bin/minetest --server --worldname our-world
+Restart=always
+User=filhit
+
+[Install]
+WantedBy=multi-user.target
