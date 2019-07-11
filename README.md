@@ -1,6 +1,8 @@
 # dsoulstest-server
 
-Run `install.sh` by `filhit` user.
+Create a `filhit` user.
+Clone repo to `/home/filhit/dsoulstest-server`
+Run `install.sh`.
 
 # AWS permissions
 
