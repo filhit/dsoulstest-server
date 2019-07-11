@@ -1,0 +1,1 @@
+0 5 * * * filhit /home/filhit/dsoulstest-server/backup.sh > /home/filhit/backup-minetest-server.log

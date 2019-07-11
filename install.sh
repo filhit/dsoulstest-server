@@ -8,3 +8,4 @@ aws configure
 sudo cp minetest-server.service /etc/systemd/system/
 sudo systemctl enable minetest-server
 sudo systemctl start minetest-server
+sudo cp backup-minetest-server-cron /etc/cron.d/
