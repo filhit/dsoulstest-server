@@ -1,6 +1,6 @@
 # dsoulstest-server
 
-Run `install.sh`.
+Run `install.sh` by `filhit` user.
 
 # AWS permissions
 
