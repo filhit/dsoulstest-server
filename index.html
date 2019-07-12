@@ -1,21 +1,83 @@
 <!doctype html>
 
 <html>
-<head>
-  <meta charset="utf-8">
-  <title>Dsoulstest-server</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <title>Dsoulstest-server</title>
 
-<body>
-  <h1>Dsoulstest server</h1>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </head>
 
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map.png" alt="Full world map, 2 pixels per one node." />
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-half.png" alt="Full world map, 1 pixel per one node." />
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-64.png" alt="Full world map, resized to 64 pixels." />
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-128.png" alt="Full world map, resized to 128 pixels." />
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-256.png" alt="Full world map, resized to 256 pixels." />
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-512.png" alt="Full world map, resized to 512 pixels." />
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-1024.png" alt="Full world map, resized to 1024 pixels." />
-  <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-2048.png" alt="Full world map, resized to 2048 pixels." />
-</body>
+  <body>
+
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="/">Dsoulstest server</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a class="nav-link" target="_blank" href="http://www.minetest.net/">Minetest website</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row py-md-3">
+        <div class="col-3">
+          <a href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map.png" target="_blank">
+            <img src="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-256.png" class="rounded float-left" alt="Full world map, resized to 1024 pixels." />
+          </a>
+        </div>
+
+        <div class="col">
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Download map
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map.png">Full, 2px per node</a>
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-half.png">Full, 1px per node</a>
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-64.png">Resized, 64x64px</a>
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-128.png">Resized, 128x128px</a>
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-256.png">Resized, 256x256px</a>
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-512.png">Resized, 512x512px</a>
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-1024.png">Resized, 1024x1024px</a>
+              <a class="dropdown-item" target="_blank" href="http://dsoulstest-site.s3-website.eu-central-1.amazonaws.com/map-2048.png">Resized, 2048x2048px</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- IMAGES -->
+      <div class="row py-md-3">
+        <div class="col-3">
+          <a href="https://i.imgur.com/gQu5Zu1.jpg" target="_blank">
+            <img class="rounded img-thumbnail" src="https://i.imgur.com/gQu5Zu1.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col">
+          <p>
+            Description
+          </p>
+        </div>
+      </div>
+
+      <div class="row py-md-3">
+        <div class="col-3">
+          <a href="https://i.imgur.com/gQu5Zu1.jpg" target="_blank">
+            <img class="rounded img-thumbnail" src="https://i.imgur.com/gQu5Zu1.jpg" alt="" />
+          </a>
+        </div>
+        <div class="col">
+          <p>
+            Description
+          </p>
+        </div>
+      </div>
+      <!-- END IMAGES -->
+    </div>
+  </body>
 </html>
