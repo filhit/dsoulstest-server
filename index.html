@@ -6,7 +6,7 @@
     <title>Dsoulstest-server</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
   </head>
@@ -49,6 +49,10 @@
             </div>
           </div>
         </div>
+        
+        <div class="col">
+          <button id="start-server" type="button" class="btn btn-primary">Start Server</button>
+        </div>
       </div>
 
       <!-- IMAGES -->
@@ -79,5 +83,13 @@
       </div>
       <!-- END IMAGES -->
     </div>
+    
+    <script>
+      $("#start-server").click(function(){
+        $.post("https://s2events.azure-automation.net/webhooks?token=PGZOFnzyLeY5nMhBSLHFRsPAcTEZtQyRYuucp8D0rNs%3d", function(data, status){
+          alert("Data: " + data + "\nStatus: " + status);
+        });
+      });
+  </script>
   </body>
 </html>
