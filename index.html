@@ -91,10 +91,8 @@
           success: function(data, textStatus){
             alert("Data: " + data + "\nStatus: " + textStatus);
           },
-          statusCode: {
-            202: function(_, textStatus) {
-              alert(textStatus);
-            }
+          complete: function(_, textStatus) {
+            alert(textStatus);
           }
         });
       });
