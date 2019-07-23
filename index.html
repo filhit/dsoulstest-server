@@ -90,6 +90,11 @@
           url: "https://s2events.azure-automation.net/webhooks?token=PGZOFnzyLeY5nMhBSLHFRsPAcTEZtQyRYuucp8D0rNs%3d", 
           success: function(data, textStatus){
             alert("Data: " + data + "\nStatus: " + textStatus);
+          },
+          statusCode: {
+            202: function(_, textStatus) {
+              alert(textStatus);
+            }
           }
         });
       });
