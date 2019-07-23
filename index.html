@@ -86,10 +86,13 @@
     
     <script>
       $("#start-server").click(function(){
-        $.post("https://s2events.azure-automation.net/webhooks?token=PGZOFnzyLeY5nMhBSLHFRsPAcTEZtQyRYuucp8D0rNs%3d", function(data, status){
-          alert("Data: " + data + "\nStatus: " + status);
+        $.post({
+          url: "https://s2events.azure-automation.net/webhooks?token=PGZOFnzyLeY5nMhBSLHFRsPAcTEZtQyRYuucp8D0rNs%3d", 
+          success: function(data, textStatus){
+            alert("Data: " + data + "\nStatus: " + textStatus);
+          }
         });
       });
-  </script>
+    </script>
   </body>
 </html>
