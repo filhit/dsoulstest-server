@@ -24,3 +24,8 @@ Backing up requires the following permission policy:
     ]
 }
 ```
+# Azure permissions
+
+Updating maps requires SAS token for https://mineteststorageaccount.blob.core.windows.net/\$web/.
+
+Put the token to /home/filhit/sas.txt
