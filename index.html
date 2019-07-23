@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        
+
         <div class="col">
           <button id="start-server" type="button" class="btn btn-primary">Start Server</button>
         </div>
@@ -83,15 +83,34 @@
       </div>
       <!-- END IMAGES -->
     </div>
-    
+
+    <div class="modal" tabindex="-1" role="dialog" id="server-start-modal">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Start is scheduled</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p>Server should be up in a minute.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">OK</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script>
       $("#start-server").click(function(){
         $.post({
-          url: "https://s2events.azure-automation.net/webhooks?token=PGZOFnzyLeY5nMhBSLHFRsPAcTEZtQyRYuucp8D0rNs%3d", 
+          url: "https://s2events.azure-automation.net/webhooks?token=PGZOFnzyLeY5nMhBSLHFRsPAcTEZtQyRYuucp8D0rNs%3d",
           complete: function() {
             // CORS is not enabled for azure automation webhooks. Complete is the only callback we get.
             // https://feedback.azure.com/forums/246290-automation/suggestions/15318723-cors-support-for-azure-automation-webhooks
-            alert ("Start is scheduled. Server should be up in a minute.");
+            $('#server-start-modal').modal()
           }
         });
       });
