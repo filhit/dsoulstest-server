@@ -4,6 +4,12 @@ set -e
 sudo add-apt-repository ppa:minetestdevs/stable
 sudo apt-get update
 sudo apt-get install minetest awscli imagemagick git
+curl -L https://aka.ms/downloadazcopy-v10-linux -o azcopyv10.tar \
+  && tar -xf azcopyv10.tar --strip-components=1 \
+  && sudo mv azcopy /usr/local/bin/azcopy \
+  && rm azcopyv10.tar \
+  && azcopy --version
+
 # minetestmapper build dependencies
 sudo apt-get install libgd-dev libsqlite3-dev libleveldb-dev libhiredis-dev libpq-dev cmake make
 git clone git@github.com:minetest/minetestmapper.git /home/filhit/minetestmapper
