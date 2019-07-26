@@ -8,6 +8,6 @@ convert /home/filhit/minetest-maps/map.png -resize 256x256 /home/filhit/minetest
 convert /home/filhit/minetest-maps/map.png -resize 512x512 /home/filhit/minetest-maps/map-512.png
 convert /home/filhit/minetest-maps/map.png -resize 1024x1024 /home/filhit/minetest-maps/map-1024.png
 convert /home/filhit/minetest-maps/map.png -resize 2048x2048 /home/filhit/minetest-maps/map-2048.png
-
+echo "Updated maps. Uploading them to azure."
 sas=`cat /home/filhit/sas.txt`
 azcopy sync /home/filhit/minetest-maps/ https://mineteststorageaccount.blob.core.windows.net/\$web/$sas --recursive=true
