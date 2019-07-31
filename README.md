@@ -4,9 +4,20 @@ Create a `filhit` user.
 Clone repo to `/home/filhit/dsoulstest-server`
 Run `install.sh`.
 
+# ImageMagick policies
+
+```
+<policy domain="resource" name="memory" value="2GiB"/>
+<policy domain="resource" name="map" value="4GiB"/>
+<policy domain="resource" name="width" value="64KP"/>
+<policy domain="resource" name="height" value="64KP"/>
+<policy domain="resource" name="area" value="100MP"/>
+<policy domain="resource" name="disk" value="2GiB"/>
+```
+
 # AWS permissions
 
-Backing up requires the following permission policy:
+Backing up requires the following permission policies:
 
 ```
 {
