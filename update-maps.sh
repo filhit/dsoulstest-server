@@ -1,5 +1,4 @@
-date
-echo "Updating maps"
+echo "Updating minetest maps"
 /home/filhit/minetestmapper/minetestmapper -i /home/filhit/.minetest/worlds/our-world -o /home/filhit/minetest-maps/map.png --zoom 2
 convert /home/filhit/minetest-maps/map.png -resize 50% /home/filhit/minetest-maps/map-half.png
 convert /home/filhit/minetest-maps/map.png -resize 64x64 /home/filhit/minetest-maps/map-64.png
