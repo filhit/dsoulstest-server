@@ -1,0 +1,1 @@
+*/10 * * * * filhit bash -c '/home/filhit/dsoulstest-server/download-sounds.sh > >(/usr/bin/logger -t minetest-download-sounds -p user.info) 2> >(/usr/bin/logger -t minetest-download-sounds -p user.err)'

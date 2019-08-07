@@ -21,5 +21,7 @@ sudo cp minetest-server.service /etc/systemd/system/
 sudo systemctl enable minetest-server
 sudo systemctl start minetest-server
 sudo cp backup-minetest-server-cron /etc/cron.d/
+sudo ln -r -s ~/.minetest/ingame_sounds /usr/share/minetest/sounds
+sudo cp download-sounds-cron /etc/cron.d/
 mkdir /home/filhit/minetest-backups
 mkdir /home/filhit/minetest-maps
