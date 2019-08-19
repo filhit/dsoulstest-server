@@ -1,6 +1,6 @@
 echo "Starting minetest-server backup"
 echo "Rotating local backups"
-logrotate -f -s /home/filhit/minetest-backups/logrotate.state /home/filhit/dsoulstest-server/logrotate.conf
+/usr/sbin/logrotate -f -s /home/filhit/minetest-backups/logrotate.state /home/filhit/dsoulstest-server/logrotate.conf
 echo "Stopping minetest-server service"
 sudo systemctl stop minetest-server
 echo "Backing up to file"
