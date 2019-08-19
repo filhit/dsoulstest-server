@@ -24,3 +24,4 @@ sudo cp backup-minetest-server-cron /etc/cron.d/
 sudo cp download-sounds-cron /etc/cron.d/
 mkdir /home/filhit/minetest-backups
 mkdir /home/filhit/minetest-maps
+sudo chmod u+s /sbin/shutdown
