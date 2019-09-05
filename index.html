@@ -53,6 +53,9 @@
         <div class="col">
           <button id="start-server" type="button" class="btn btn-primary">Start Server</button>
         </div>
+        <div class="col">
+          <button id="server-status" type="button" class="btn">Server Status</button>
+        </div>
       </div>
 
       <!-- IMAGES -->
@@ -111,6 +114,17 @@
             // CORS is not enabled for azure automation webhooks. Complete is the only callback we get.
             // https://feedback.azure.com/forums/246290-automation/suggestions/15318723-cors-support-for-azure-automation-webhooks
             $('#server-start-modal').modal()
+          }
+        });
+      });
+      $("#server-status").click(function(){
+        $.get({
+          url: "https://minetest.westeurope.cloudapp.azure.com:30001",
+          success: function() {
+            alert("Online!");
+          },
+          error: function() {
+            alert("Offline!");
           }
         });
       });
