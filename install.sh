@@ -1,9 +1,14 @@
 #!/usr/bin/env bash
 
 set -e
+sudo apt-get update
+sudo apt-get install software-properties-common
+sudo add-apt-repository universe
+sudo add-apt-repository ppa:certbot/certbot
 sudo add-apt-repository ppa:minetestdevs/stable
 sudo apt-get update
-sudo apt-get install minetest awscli imagemagick git
+sudo apt-get install minetest awscli imagemagick git certbot
+sudo certbot certonly --standalone
 curl -L https://aka.ms/downloadazcopy-v10-linux -o azcopyv10.tar \
   && tar -xf azcopyv10.tar --strip-components=1 \
   && sudo mv azcopy /usr/local/bin/azcopy \
