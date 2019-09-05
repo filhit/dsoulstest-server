@@ -24,6 +24,7 @@ make -j2 -C /home/filhit/minetestmapper
 wget https://daconcepts.com/vanessa/hobbies/minetest/colors.txt -O /home/filhit/.minetest/colors.txt
 aws configure
 sudo cp minetest-server.service /etc/systemd/system/
+sudo cp minetest-web-server.service /etc/systemd/system/
 sudo systemctl enable minetest-server
 sudo systemctl start minetest-server
 sudo cp backup-minetest-server-cron /etc/cron.d/

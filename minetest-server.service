@@ -1,5 +1,6 @@
 [Unit]
 Description=Runs dsoulstest minetest server
+Wants=minetest-web-server.service
 
 [Service]
 ExecStart=/usr/bin/minetest --server --worldname our-world
