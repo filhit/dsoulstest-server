@@ -15,3 +15,5 @@ fi
 echo "Starting minetest-server service"
 sudo systemctl start minetest-server
 echo "Backing up minetest-server finished"
+echo "Renewing the certificate"
+sudo certbot renew
