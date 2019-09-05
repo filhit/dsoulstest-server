@@ -37,7 +37,7 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         global last_update
         last_update = datetime.now()
 
-httpd = HTTPServer(('localhost', 30001), HTTPRequestHandler)
+httpd = HTTPServer(('', 30001), HTTPRequestHandler)
 httpd.socket = ssl.wrap_socket (httpd.socket,
         keyfile="/etc/letsencrypt/live/minetest.westeurope.cloudapp.azure.com/privkey.pem",
         certfile='/etc/letsencrypt/live/minetest.westeurope.cloudapp.azure.com/fullchain.pem',
