@@ -8,6 +8,11 @@ last_players = None
 
 class HTTPRequestHandler(BaseHTTPRequestHandler):
 
+    def end_headers (self):
+        self.send_header('Access-Control-Allow-Origin', '*')
+        self.send_header('Content-Type', 'application/json')
+        BaseHTTPRequestHandler.end_headers(self)
+
     def create_response(self):
         response = {}
 
