@@ -9,6 +9,7 @@ sudo add-apt-repository ppa:minetestdevs/stable
 sudo apt-get update
 sudo apt-get install minetest awscli imagemagick git certbot
 sudo certbot certonly --standalone
+sudo setfacl -R -m u:filhit:rX /etc/letsencrypt/
 curl -L https://aka.ms/downloadazcopy-v10-linux -o azcopyv10.tar \
   && tar -xf azcopyv10.tar --strip-components=1 \
   && sudo mv azcopy /usr/local/bin/azcopy \
