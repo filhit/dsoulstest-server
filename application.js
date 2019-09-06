@@ -16,12 +16,16 @@ $(function() {
 
     $.ajax({
       url: "https://minetest.westeurope.cloudapp.azure.com:30001",
-      success: function() {
+      success: function(data) {
         $(".js-loader").hide();
 
         statusWrapper.removeClass("badge-secondary");
         statusWrapper.addClass("badge-success");
-        statusWrapper.text("Online");
+        var message = "Online";
+        if (data.players !== undefined) {
+          message = message + " (" + data.players + ")";
+        }   
+        statusWrapper.text(message);
         statusWrapper.show();
       },
       error: function() {
