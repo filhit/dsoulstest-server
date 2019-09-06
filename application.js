@@ -11,30 +11,38 @@ $(function() {
   });
 
   var updateServerStatus = function() {
-    var statusWrapper = $("#server-status");
-    $(".js-loader").show()
+    var statusWrapper = $("#server-status-container");
+    var icon = $("#server-status-icon", statusWrapper);
+    var spinner = $(".server-loading-icon", statusWrapper);
+    spinner.show();
 
     $.ajax({
       url: "https://minetest.westeurope.cloudapp.azure.com:30001",
       success: function(data) {
-        $(".js-loader").hide();
+        spinner.hide();
 
-        statusWrapper.removeClass("badge-secondary");
-        statusWrapper.addClass("badge-success");
-        var message = "Online";
+        icon.removeClass("text-secondary");
+        icon.addClass("text-success");
+        icon.attr("title", "Online");
+
         if (data.players !== undefined) {
-          message = message + " (" + data.players + ")";
-        }   
-        statusWrapper.text(message);
-        statusWrapper.show();
+          $("#player-count", statusWrapper).text(data.players);
+          $("#players", statusWrapper).show();
+        } else {
+          $("#players", statusWrapper).hide();
+        }
+
+        icon.show();
       },
       error: function() {
-        $(".js-loader").hide();
+        spinner.hide();
 
-        statusWrapper.removeClass("badge-success");
-        statusWrapper.addClass("badge-secondary");
-        statusWrapper.text("Offline");
-        statusWrapper.show();
+        icon.attr("title", "Offline");
+        icon.removeClass("text-success");
+        icon.addClass("text-secondary");
+        $("#players", statusWrapper).hide();
+
+        icon.show();
       },
       timeout: 3000
     });
