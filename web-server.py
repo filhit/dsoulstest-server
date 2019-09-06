@@ -39,6 +39,7 @@ class HTTPRequestHandler(BaseHTTPRequestHandler):
         last_players = request['players']
         self.send_response(200)
         self.end_headers()
+        self.wfile.write('{}'.encode())
         global last_update
         last_update = datetime.now()
 
