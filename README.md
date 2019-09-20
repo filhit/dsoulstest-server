@@ -39,4 +39,4 @@ Backing up requires the following permission policies:
 
 Updating maps requires SAS token for https://mineteststorageaccount.blob.core.windows.net/\$web/.
 
-Put the token to /home/filhit/sas.txt
+Copy secrets from secrets.sh.example to secrets.sh and expand them.
