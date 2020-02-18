@@ -16,4 +16,5 @@ echo "Starting minetest-server service"
 sudo systemctl start minetest-server
 echo "Backing up minetest-server finished"
 echo "Renewing the certificate"
-sudo certbot renew
+sudo certbot renew 
+sudo setfacl -R -m u:filhit:rX /etc/letsencrypt/
